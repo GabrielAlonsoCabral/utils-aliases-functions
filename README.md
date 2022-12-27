@@ -33,6 +33,11 @@ function swapProfile {
     node $ALIASES_PATH/swap-aws-profile.js;
 }
 ```
+Enable Changes
+```
+$ source ~/.zshrc
+```
+
 
 ### Linux
 add this code lines on your ```~/.bashrc```
@@ -45,3 +50,9 @@ function swapProfile {
     node $ALIASES_PATH/swap-aws-profile.js;
 }   
 ```
+Enable Changes
+```
+$ source ~/.bashrc
+```
+
+<br/>
