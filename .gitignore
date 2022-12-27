@@ -1,4 +1,6 @@
-.credentials
+.credentials/*
+!.credentials/aws.credentials.example.json
+
 node_modules
 yarn.lock
 .DS_Store

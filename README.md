@@ -8,12 +8,17 @@
 
 ```
 # clone this repository
-$ git clone https://github.com/GabrielAlonsoCabral/utils-aliases-functions.git
+$ git clone https://github.com/GabrielAlonsoCabral/utils-aliases-functions.git .aliases
+$ cd .aliases
 ```
 
 <br/>
 
 ## CONFIGURE YOUR ENVIRONMENT
+
+### AWS Credentials
+1. Inside ```.credentials/``` Replace your ```aws.credentials.example.json``` by ```aws.credentials.json```
+2. Replace profiles in JSON by your aws profiles
 
 
 ### MacOS
