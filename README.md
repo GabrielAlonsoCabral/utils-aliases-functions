@@ -23,7 +23,7 @@ $ cd .aliases
 
 
 ### MacOS
-add this code lines on your ```~/.zshrc```
+Add this code lines on your ```~/.zshrc```
 
 ```
 export ALIASES_PATH="$HOME/.aliases"
@@ -40,13 +40,13 @@ $ source ~/.zshrc
 
 
 ### Linux
-add this code lines on your ```~/.bashrc```
+Add this code lines on your ```~/.bashrc```
 
 ```
 export ALIASES_PATH="$HOME/.aliases"
 export AWS_PATH="$HOME/.aws"     
 
-function swapProfile {
+function toggleAwsProfile {
     node $ALIASES_PATH/swap-aws-profile.js;
 }   
 ```
@@ -56,3 +56,10 @@ $ source ~/.bashrc
 ```
 
 <br/>
+
+## USAGE
+
+```
+# Toggle your default AWS Profile 
+$ toggleAwsProfile
+```
