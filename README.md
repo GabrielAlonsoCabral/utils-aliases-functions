@@ -15,7 +15,7 @@ $ git clone https://github.com/GabrielAlonsoCabral/utils-aliases-functions.git
 ```
 # MacOS
     1. open your ```~/.zshrc```
-    2. add this on your ```~/.zshrc```
+    2. add this lines on your ```~/.zshrc```
         ```
         export ALIASES_PATH="$HOME/.aliases"
         export AWS_PATH="$HOME/.aws"
