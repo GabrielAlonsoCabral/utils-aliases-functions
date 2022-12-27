@@ -3,14 +3,14 @@
   If you wish to use Javascript or another programming language instead the common SH Functions this is the correct repository.
   
 
-## INSTALLATION
+## Installation
 
 ```
 # clone this repository
 $ git clone https://github.com/GabrielAlonsoCabral/utils-aliases-functions.git
 ```
 
-## CONFIGURE YOUR ENVIRONMENT
+## Configure your environment
 
 
 ### MacOS
@@ -27,18 +27,4 @@ add this code lines on your ```~/.bashrc```
 ```
 export ALIASES_PATH="$HOME/.aliases"
 export AWS_PATH="$HOME/.aws"        
-```
-
-## GENERATE YOUR ENVS
-
-```
-# This script will create your .env
-$ yarn generate:env
-```
-
-## UPDATE YOUR SECRET
-
-```
-# This script will update your .env and deploy it on AWS.
-$ yarn update:env
 ```
