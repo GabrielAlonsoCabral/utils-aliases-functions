@@ -22,6 +22,10 @@ add this code lines on your ```~/.zshrc```
 ```
 export ALIASES_PATH="$HOME/.aliases"
 export AWS_PATH="$HOME/.aws"        
+
+function swapProfile {
+    node $ALIASES_PATH/swap-aws-profile.js;
+}
 ```
 
 ### Linux
@@ -29,5 +33,9 @@ add this code lines on your ```~/.bashrc```
 
 ```
 export ALIASES_PATH="$HOME/.aliases"
-export AWS_PATH="$HOME/.aws"        
+export AWS_PATH="$HOME/.aws"     
+
+function swapProfile {
+    node $ALIASES_PATH/swap-aws-profile.js;
+}   
 ```
