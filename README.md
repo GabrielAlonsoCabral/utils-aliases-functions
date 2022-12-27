@@ -47,7 +47,7 @@ export ALIASES_PATH="$HOME/.aliases"
 export AWS_PATH="$HOME/.aws"     
 
 function toggleAwsProfile {
-    node $ALIASES_PATH/toggle-aws-profile.js;
+    node $ALIASES_PATH/functions/toggle-aws-profile.js;
 }   
 ```
 Enable Changes
