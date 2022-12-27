@@ -3,14 +3,14 @@
   If you wish to use Javascript or another programming language instead the common SH Functions this is the correct repository.
   
 
-## Installation
+## INSTALLATION
 
 ```
 # clone this repository
 $ git clone https://github.com/GabrielAlonsoCabral/utils-aliases-functions.git
 ```
 
-## Configure your environment
+## CONFIGURE YOUR ENVIRONMENT
 
 
 ### MacOS
