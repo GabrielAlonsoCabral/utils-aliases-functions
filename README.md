@@ -10,7 +10,7 @@
 # clone this repository
 $ git clone https://github.com/GabrielAlonsoCabral/utils-aliases-functions.git
 ```
-
+  <br/>
 ## CONFIGURE YOUR ENVIRONMENT
 
 
