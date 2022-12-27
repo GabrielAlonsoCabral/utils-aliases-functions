@@ -4,7 +4,7 @@
   
   <br/>
 
-## INSTALLATION
+## Installation
 
 ```
 # clone this repository
@@ -14,7 +14,7 @@ $ cd .aliases
 
 <br/>
 
-## CONFIGURE YOUR ENVIRONMENT
+## Configure Your Environment
 
 ### AWS Credentials
 1. Inside ```.credentials/``` Replace your ```aws.credentials.example.json``` by ```aws.credentials.json```
@@ -65,7 +65,7 @@ $ source ~/.bashrc
 
 <br/>
 
-## USAGE
+## Usage
 
 ```
 # Show your default AWS Profile 
