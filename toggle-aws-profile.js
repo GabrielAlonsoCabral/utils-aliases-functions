@@ -8,7 +8,7 @@ const AWS_RELATIVE_PATH = relative(ALIASES_PATH, AWS_PATH).replace("\n","")
 
 const JSON_CREDENTIALS_PATH =join('.','.credentials','aws.credentials.json')
 
-async function swapAWSProfile(){
+async function toggleAWSProfile(){
     const credentialsText = await fs.readFile(JSON_CREDENTIALS_PATH, {encoding:'utf-8'});
     const credentialsJson = JSON.parse(credentialsText)
     const newCredentials ={};
@@ -30,4 +30,4 @@ async function swapAWSProfile(){
     await fs.writeFile(JSON_CREDENTIALS_PATH, JSON.stringify(newCredentials));
 }
 
-swapAWSProfile()
+toggleAWSProfile()
