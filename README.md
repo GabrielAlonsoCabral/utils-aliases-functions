@@ -29,9 +29,13 @@ Add this code lines on your ```~/.zshrc```
 export ALIASES_PATH="$HOME/.aliases"
 export AWS_PATH="$HOME/.aws"        
 
-function swapProfile {
+function toggleAwsProfile {
     node $ALIASES_PATH/functions/toggle-aws-profile.js;
 }
+
+function showAwsProfile {
+    node $ALIASES_PATH/functions/show-aws-profile.js;
+}   
 ```
 Enable Changes
 ```
@@ -49,6 +53,10 @@ export AWS_PATH="$HOME/.aws"
 function toggleAwsProfile {
     node $ALIASES_PATH/functions/toggle-aws-profile.js;
 }   
+
+function showAwsProfile {
+    node $ALIASES_PATH/functions/show-aws-profile.js;
+}   
 ```
 Enable Changes
 ```
@@ -60,6 +68,9 @@ $ source ~/.bashrc
 ## USAGE
 
 ```
+# Show your default AWS Profile 
+$ showAwsProfile
+
 # Toggle your default AWS Profile 
 $ toggleAwsProfile
 ```
