@@ -20,7 +20,7 @@ $ cd .aliases
 1. Inside ```.credentials/``` Replace your ```aws.credentials.example.json``` by ```aws.credentials.json```
 2. Replace profiles in JSON by your aws profiles
 
-<br/>
+
 
 ### MacOS
 add this code lines on your ```~/.zshrc```
