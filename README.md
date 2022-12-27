@@ -13,14 +13,13 @@ $ git clone https://github.com/GabrielAlonsoCabral/utils-aliases-functions.git
 ## CONFIGURE YOUR ENVIRONMENT 
 
 ```
-# MacOS
-    1. open your ```~/.zshrc```
-    2. add this lines on your ```~/.zshrc```
-        `
-        export ALIASES_PATH="$HOME/.aliases"
-        export AWS_PATH="$HOME/.aws"
-        `
+# MacOS 
+# add those code lines below on your ```~/.zshrc```        
 
+``
+    export ALIASES_PATH="$HOME/.aliases"
+    export AWS_PATH="$HOME/.aws"        
+``
 ```
 
 ## GENERATE YOUR ENVS
