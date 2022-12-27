@@ -10,16 +10,15 @@
 $ git clone https://github.com/GabrielAlonsoCabral/utils-aliases-functions.git
 ```
 
-## CONFIGURE YOUR ENVIRONMENT 
+## CONFIGURE YOUR ENVIRONMENT
+
+
+### MacOS
+add those code lines below on your ```~/.zshrc```
 
 ```
-# MacOS 
-# add those code lines below on your ```~/.zshrc```        
-
-``
-    export ALIASES_PATH="$HOME/.aliases"
-    export AWS_PATH="$HOME/.aws"        
-``
+export ALIASES_PATH="$HOME/.aliases"
+export AWS_PATH="$HOME/.aws"        
 ```
 
 ## GENERATE YOUR ENVS
