@@ -3,7 +3,6 @@
   If you wish to use Javascript or another programming language instead the common SH Functions this is the correct repository.
   
   <br/>
-  <br/>
 
 ## INSTALLATION
 
