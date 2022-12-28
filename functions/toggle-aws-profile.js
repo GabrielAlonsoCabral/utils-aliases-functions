@@ -19,7 +19,7 @@ async function toggleAWSProfile(){
         const credential = credentialsJson[profile]
 
             const profileAlias = credential.is_default ? `[${profile}]` : '[default]';
-            resultString+=`${index===0?'':'\n'}${profileAlias}\naws_access_key_id=${credential.aws_access_key_id}\naws_secret_access_key=${credential.aws_secret_access_key}\n`
+            resultString+=`${index===0?'':'\n'}${profileAlias}\naws_access_key_id = ${credential.aws_access_key_id}\naws_secret_access_key = ${credential.aws_secret_access_key}\n`
             credential.is_default = !credential.is_default;   
             
             newCredentials[profile]=credential
