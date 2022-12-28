@@ -30,12 +30,18 @@ export ALIASES_PATH="$HOME/.aliases"
 export AWS_PATH="$HOME/.aws"        
 
 function toggleAwsProfile {
+    currentPath=$PWD;
+    cd $ALIASES_PATH;
     node $ALIASES_PATH/functions/toggle-aws-profile.js;
+    cd $currentPath;
 }
 
 function showAwsProfile {
+    currentPath=$PWD;
+    cd $ALIASES_PATH;
     node $ALIASES_PATH/functions/show-aws-profile.js;
-}   
+    cd $currentPath;
+}  
 ```
 Enable Changes
 ```
@@ -48,15 +54,21 @@ Add this code lines on your ```~/.bashrc```
 
 ```
 export ALIASES_PATH="$HOME/.aliases"
-export AWS_PATH="$HOME/.aws"     
+export AWS_PATH="$HOME/.aws"    
 
 function toggleAwsProfile {
+    currentPath=$PWD;
+    cd $ALIASES_PATH;
     node $ALIASES_PATH/functions/toggle-aws-profile.js;
-}   
+    cd $currentPath;
+}
 
 function showAwsProfile {
+    currentPath=$PWD;
+    cd $ALIASES_PATH;
     node $ALIASES_PATH/functions/show-aws-profile.js;
-}   
+    cd $currentPath;
+}
 ```
 Enable Changes
 ```
