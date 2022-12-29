@@ -11,22 +11,27 @@ const JSON_CREDENTIALS_PATH =join(__dirname,'..','.credentials','aws.credentials
 async function toggleAWSProfile(){
     const credentialsText = await fs.readFile(JSON_CREDENTIALS_PATH, {encoding:'utf-8'});
     const credentialsJson = JSON.parse(credentialsText)
+
     const newCredentials ={};
 
     let resultString=""
+    let regionResultString=""
         
     Object.keys(credentialsJson).forEach((profile,index)=>{
         const credential = credentialsJson[profile]
 
             const profileAlias = credential.is_default ? `[${profile}]` : '[default]';
+
             resultString+=`${index===0?'':'\n'}${profileAlias}\naws_access_key_id = ${credential.aws_access_key_id}\naws_secret_access_key = ${credential.aws_secret_access_key}\n`
+            regionResultString+=`${index===0?'':'\n'}${profileAlias}\nregion = ${credential.region}\n`
+
             credential.is_default = !credential.is_default;   
-            
+                                    
             newCredentials[profile]=credential
     })
 
-
-    await fs.writeFile(join(AWS_RELATIVE_PATH,'credentials'),resultString)        
+    await fs.writeFile(join(AWS_RELATIVE_PATH,'credentials'),resultString);      
+    await fs.writeFile(join(AWS_RELATIVE_PATH,'config'),regionResultString);   
     await fs.writeFile(JSON_CREDENTIALS_PATH, JSON.stringify(newCredentials));
 }
 
