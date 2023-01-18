@@ -30,6 +30,8 @@ Add this code lines on your ```~/.zshrc```
 ```
 export ALIASES_PATH="$HOME/.aliases"
 export AWS_PATH="$HOME/.aws"        
+export GH_NAME="ADD_YOUR_GITHUB_NAME"
+
 
 function toggleAwsProfile {
     currentPath=$PWD;
@@ -44,6 +46,10 @@ function showAwsProfile {
     node $ALIASES_PATH/functions/show-aws-profile.js;
     cd $currentPath;
 }  
+
+function commit (){
+  /usr/bin/python $ALIASES_PATH/functions/commit.py "$@"
+}
 ```
 Enable Changes
 ```
@@ -57,6 +63,7 @@ Add this code lines on your ```~/.bashrc```
 ```
 export ALIASES_PATH="$HOME/.aliases"
 export AWS_PATH="$HOME/.aws"    
+export GH_NAME="ADD_YOUR_GITHUB_NAME"
 
 function toggleAwsProfile {
     currentPath=$PWD;
@@ -70,6 +77,10 @@ function showAwsProfile {
     cd $ALIASES_PATH;
     node $ALIASES_PATH/functions/show-aws-profile.js;
     cd $currentPath;
+}
+
+function commit (){
+  /usr/bin/python $ALIASES_PATH/functions/commit.py "$@"
 }
 ```
 Enable Changes
