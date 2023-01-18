@@ -37,4 +37,5 @@ if(len(COMMIT_MESSAGE_PREFIX)==0):
 COMMIT_MESSAGE ="{} - {} - {}".format(COMMIT_MESSAGE_PREFIX, SERVICE, BRANCH_NAME)
 os.system("git add .")
 os.system("git commit -m '{}' ".format(COMMIT_MESSAGE))
+os.system("gh pr create --assignee @me --title '{}' --body '{}'".format(COMMIT_MESSAGE, FILES) )
 
