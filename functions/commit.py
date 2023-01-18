@@ -2,8 +2,6 @@ import os
 import subprocess
 import sys
 
-print(sys.argv)
-
 FILES=str(subprocess.check_output("git status -s", shell=True).decode('ascii'))
 SERVICE=str(subprocess.check_output("git ls-remote --get-url | xargs basename -s .git", shell=True).rstrip().decode('ascii'))
 
