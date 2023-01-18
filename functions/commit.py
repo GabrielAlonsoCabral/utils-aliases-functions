@@ -35,7 +35,7 @@ if(len(FILES)==0):
 
 
 COMMIT_MESSAGE ="{} - {} - {}".format(COMMIT_MESSAGE_PREFIX, SERVICE, BRANCH_NAME)
-
+print(COMMIT_MESSAGE)
 os.system("git add .")
 os.system("git commit -m '{}' ".format(COMMIT_MESSAGE))
 
