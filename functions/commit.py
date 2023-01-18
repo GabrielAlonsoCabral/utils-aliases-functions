@@ -4,6 +4,7 @@ import sys
 
 FILES=str(subprocess.check_output("git status -s", shell=True).decode('ascii'))
 SERVICE=str(subprocess.check_output("git ls-remote --get-url | xargs basename -s .git", shell=True).rstrip().decode('ascii'))
+GH_NAME=str(subprocess.check_output("gh api user | jq -r '.login'", shell=True).decode('ascii'))
 
 if(len(FILES)==0):
     exit()
@@ -18,10 +19,9 @@ INTERNAL_DELETED_PREFIX="[FIX]"
 
 ORIGINAL_BRANCH_NAME=str(subprocess.check_output("git rev-parse --abbrev-ref HEAD", shell=True).decode("ascii"))
 BRANCH_NAME=str(subprocess.check_output("git rev-parse --abbrev-ref HEAD", shell=True).decode("ascii"))
-BRANCH_PREFIX_TO_REPLACE="gabrielAlonsoCabral/"
 
-if(BRANCH_PREFIX_TO_REPLACE in BRANCH_NAME):
-    BRANCH_NAME=BRANCH_NAME.replace(BRANCH_PREFIX_TO_REPLACE, "")
+if(GH_NAME in BRANCH_NAME):
+    BRANCH_NAME=BRANCH_NAME.replace("{}/".format(GH_NAME), "")
 
 COMMIT_MESSAGE_PREFIX=""
 
