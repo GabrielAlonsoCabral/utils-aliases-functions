@@ -5,7 +5,7 @@ FILES=str(subprocess.check_output("git status -s", shell=True).decode('ascii'))
 SERVICE=str(subprocess.check_output("git ls-remote --get-url | xargs basename -s .git", shell=True).rstrip().decode('ascii'))
 
 
-GIT_CREATED_PREFIX="??"
+GIT_CREATED_PREFIX="?"
 GIT_UPDATED_PREFIX="M"
 GIT_DELETED_PREFIX="D"
 
@@ -21,16 +21,13 @@ if(BRANCH_PREFIX_TO_REPLACE in BRANCH_NAME):
 
 COMMIT_MESSAGE_PREFIX=""
 
-
-print(FILES[0])
-
-if(FILES[0]==GIT_CREATED_PREFIX):
+if(FILES[1]==GIT_CREATED_PREFIX):
     COMMIT_MESSAGE_PREFIX=INTERNAL_CREATED_PREFIX
 
-if(FILES[0]==GIT_UPDATED_PREFIX):
+if(FILES[1]==GIT_UPDATED_PREFIX):
     COMMIT_MESSAGE_PREFIX=INTERNAL_UPDATED_PREFIX
 
-if(FILES[0]==GIT_DELETED_PREFIX):
+if(FILES[1]==GIT_DELETED_PREFIX):
     COMMIT_MESSAGE_PREFIX=INTERNAL_DELETED_PREFIX
 
 if(len(COMMIT_MESSAGE_PREFIX)==0):
