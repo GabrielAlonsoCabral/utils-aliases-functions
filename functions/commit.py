@@ -4,7 +4,7 @@ import sys
 
 FILES=str(subprocess.check_output("git status -s", shell=True).decode('ascii'))
 SERVICE=str(subprocess.check_output("git ls-remote --get-url | xargs basename -s .git", shell=True).rstrip().decode('ascii'))
-GH_NAME=str(subprocess.check_output("echo $GH_NAME", shell=True).decode('ascii'))
+GH_NAME=str(subprocess.check_output("echo $GH_NAME", shell=True).decode('ascii').rstrip())
 # GH_NAME=str(subprocess.check_output("gh api user | jq -r '.login'", shell=True).decode('ascii'))
 
 if(len(FILES)==0):
