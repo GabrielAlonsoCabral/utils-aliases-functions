@@ -43,7 +43,6 @@ COMMIT_MESSAGE ="{} - {} - {}".format(COMMIT_MESSAGE_PREFIX, SERVICE, BRANCH_NAM
 os.system("git add .")
 os.system("git commit -m '{}' ".format(COMMIT_MESSAGE))
 
-
 for index, arg in enumerate(sys.argv):
     if(arg=='--push'):
         os.system("git push origin $(git rev-parse --abbrev-ref HEAD)")
