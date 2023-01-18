@@ -1,7 +1,9 @@
 # Utils Aliases Functions
   Utils Aliases Functions helps you to replace manual tasks for functions in bash terminal globally. <br/>
   If you wish to use Javascript or another programming language instead the common SH Functions this is the correct repository.
-  
+
+
+  Developed by: <a href="https://www.github.com/gabrielAlonsoCabral">@GabrielAlonsoCabral</a>  
   <br/>
 
 ## Installation
