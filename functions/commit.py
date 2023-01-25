@@ -45,9 +45,6 @@ os.system("git commit -m '{}' ".format(COMMIT_MESSAGE))
 
 
 for index, arg in enumerate(sys.argv):
-    if(arg=='--push'):
-        os.system("git push origin $(git rev-parse --abbrev-ref HEAD)")
-
     if(arg=='--pr'):
         os.system("gh pr create --assignee @me --title '{}' --body '{}'".format(COMMIT_MESSAGE, FILES) )
 
