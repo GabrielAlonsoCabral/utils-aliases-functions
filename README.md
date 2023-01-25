@@ -32,7 +32,6 @@ export ALIASES_PATH="$HOME/.aliases"
 export AWS_PATH="$HOME/.aws"        
 export GH_NAME="ADD_YOUR_GITHUB_NAME"
 
-
 function toggleAwsProfile {
     currentPath=$PWD;
     cd $ALIASES_PATH;
@@ -50,6 +49,19 @@ function showAwsProfile {
 function commit (){
   /usr/bin/python $ALIASES_PATH/functions/commit.py "$@"
 }
+
+function pull (){
+  /usr/bin/python $ALIASES_PATH/functions/pull.py "$@"
+}
+
+function push (){
+  /usr/bin/python $ALIASES_PATH/functions/push.py "$@"
+}
+
+function branch (){
+  /usr/bin/python $ALIASES_PATH/functions/branch.py "$@"
+}
+
 ```
 Enable Changes
 ```
@@ -80,8 +92,21 @@ function showAwsProfile {
 }
 
 function commit (){
-  /usr/bin/python $ALIASES_PATH/functions/commit.py "$@"
+  python3 $ALIASES_PATH/functions/commit.py "$@"
 }
+
+function pull (){
+  python3 $ALIASES_PATH/functions/pull.py "$@"
+}
+
+function push (){
+  python3 $ALIASES_PATH/functions/push.py "$@"
+}
+
+function branch (){
+  python3 $ALIASES_PATH/functions/branch.py "$@"
+}
+
 ```
 Enable Changes
 ```
@@ -98,4 +123,19 @@ $ showAwsProfile
 
 # Toggle your default AWS Profile 
 $ toggleAwsProfile
+
+# Create a git branch with name pattern (ex: "GabrielAlonsoCabral/TITLE")
+$ branch --name "TITLE"
+
+# Push your current branch to remote origin
+$ push
+
+# pull your current branch with master
+$ pull
+
+# Add your changed files and commit it with pattern name
+$ commit
+
+# Add your changed files and commit it with pattern name and open pull request
+$ commit --pr
 ```
