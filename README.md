@@ -62,6 +62,9 @@ function branch (){
   /usr/bin/python $ALIASES_PATH/functions/branch.py "$@"
 }
 
+function portkill (){
+  sh $ALIASES_PATH/functions/portkill.sh "$@"
+}
 ```
 Enable Changes
 ```
@@ -107,6 +110,9 @@ function branch (){
   python3 $ALIASES_PATH/functions/branch.py "$@"
 }
 
+function portkill (){
+  sh $ALIASES_PATH/functions/portkill.sh "$@"
+}
 ```
 Enable Changes
 ```
@@ -138,4 +144,7 @@ $ commit
 
 # Add your changed files and commit it with pattern name and open pull request
 $ commit --pr
+
+# Kill process running in PORT 3000
+$ portkill 3000
 ```
